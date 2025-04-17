@@ -1,64 +1,62 @@
-
-# Project 4 - **Memory Match**
+# Project 4 - Memory Match
 
 Submitted by: **Semen Kolesnykov**
 
-**Memory Match** is a SwiftUI-based memory card game app. The goal is to match pairs of cards by remembering their positions. Players can flip cards to reveal their content and must find matching pairs. The game includes options to choose difficulty levels by selecting different pair amounts.
+**Memory Match** is a SwiftUI-based card matching game that challenges players to remember card positions and find all the matching pairs. The game features smooth animations, difficulty level selection, and a responsive layout that adjusts to different screen sizes.
 
-Time spent: **6** hours spent in total
+**Time spent:** ~6 hours in total
 
-## Required Features
+---
 
-The following **required** functionality is completed:
+## ✅ Required Features
 
-- [x] App loads to display a grid of cards initially placed face-down:
-  - [x] Upon launching the app, a grid of cards is visible.
-  - [x] Cards are facedown to indicate the start of the game.
-- [x] Users can tap cards to toggle their display between the back and the face:
-  - [x] Tapping on a facedown card flips it to reveal the front.
-  - [x] Tapping a second card that is not identical flips both back down.
-- [x] When two matching cards are found, they both disappear from view:
-  - [x] Implemented logic to check if two tapped cards match.
-  - [x] If they match, both cards disappear from view.
-  - [x] If they don't match, they return to the facedown position.
-- [x] User can reset the game and start a new game via a button:
-  - [x] Includes a button that allows users to reset the game.
-  - [x] Button shuffles the cards and resets any game-related state.
+The following required features are fully implemented:
 
-## Optional Features
+- [x] App launches with a grid of face-down cards.
+- [x] User can tap cards to flip them and reveal the content.
+- [x] If two flipped cards match, they disappear from the board.
+- [x] If they don’t match, they flip back after a short delay.
+- [x] Game can be reset using a "New Game" button, which shuffles the cards and restarts the game logic.
 
-The following **optional** features are implemented:
+---
 
-- [x] User can select number of pairs to play with (at least 3, 6, or 10).
-- [x] App allows for user to scroll to see pairs out of view.
-- [x] Enhanced visual appeal with colored buttons, custom emojis, and shadows.
+## 🌟 Optional Features
 
-## Additional Features
+The following optional features are also implemented:
 
-- [x] Cards fade away after matching.
-- [x] Game logic and card layout optimized for SwiftUI.
-- [x] Game reinitializes properly using a unique deck identifier for state refresh.
+- [x] User can select number of pairs to play with (e.g., 3, 6, or 10).
+- [x] Scrollable grid allows users to play with more pairs than fit on screen.
+- [x] Custom card designs using emojis and background colors.
+- [x] Polished UI with shadows and animations for an engaging experience.
 
-## Video Walkthrough
+---
 
-Due to hardware limitations in FIU Green Library, I was unable to record a full video walkthrough. My simulator only supports basic rendering. Screenshots and detailed explanations are included in the walkthrough `.docx` file.
+## 🧠 Additional Features
 
-## Notes
+- [x] Cards fade out smoothly when matched.
+- [x] Each new game is initialized with a unique deck using a UUID to force layout refresh.
+- [x] Game logic is written using SwiftUI best practices and declarative state management.
 
-Challenges included managing state for flipping cards and ensuring correct delay for unmatched pairs before flipping back. It also required careful logic for matching and resetting the board with shuffled emojis.
+---
 
-## License
+## 🎥 App Walkthrough
 
-    Copyright 2025 Semen Kolesnykov
+> **Note:** Due to outdated and underpowered hardware in FIU Green Library, I was unable to record a full video walkthrough using the simulator. Most iMacs there lack proper support for running iOS simulators reliably and don’t allow installing third-party recording software.  
+>
+> Instead, I’ve included a GIF walkthrough and a detailed Word document with annotated screenshots explaining all implemented features.
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+![Walkthrough](memoryGame.gif)
 
-        http://www.apache.org/licenses/LICENSE-2.0
+📄 [`Semen_Kolesnykov_MemoryGame_Walkthrough.docx`](Semen_Kolesnykov_MemoryGame_Walkthrough.docx)
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+---
+
+## 📝 Notes
+
+- The most complex part of the project was correctly implementing delayed flip-back of unmatched pairs.
+- Managing SwiftUI view states and conditional rendering for matched/disappearing cards also took thoughtful debugging.
+- Reset logic was designed to avoid animation bugs and visual glitches.
+
+---
+
+## 📜 License
